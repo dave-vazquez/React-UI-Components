@@ -1,5 +1,10 @@
 .card-container {
-    width: 100%;
+    width: 87%;
+
+    margin-left: 60px;
+
+    border: 1px solid #d9dfe4;
+    border-radius: 5px;
 }
 
 .card-banner-container {
@@ -8,4 +13,30 @@
 
 .card-banner-container img {
     width: 100%;
+    border-radius: 5px 5px 0 0;
+
+}
+
+.card-content-container {
+    padding: 15px;
+}
+
+.card-content-header {
+    margin-bottom: 10px;
+    
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.card-content {
+    margin-bottom: 10px;
+
+    font-size: .9rem;
+    line-height: 20px;
+}
+
+.card-link {
+    color: #a0a9b3;
+    font-size: .9rem;
+    text-decoration: none;
 }

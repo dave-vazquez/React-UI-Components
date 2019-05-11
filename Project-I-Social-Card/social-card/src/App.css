@@ -4,9 +4,10 @@
 */
 
 .app-container {
-
-  width: 600px;
+  width: 590px;
   margin: 0 auto;
-  border: 1px solid black;
 
+  /* border: 1px solid black; */
+
+  padding: 10px;
 }

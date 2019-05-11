@@ -3,11 +3,11 @@ import './Footer.css'
 
 export const Footer = () => {
     return (
-        <div>
-            <i class="far fa-comment"></i>
-            <i class="fas fa-sync-alt"></i> 6
-            <i class="far fa-heart"></i> 4
-            <i class="far fa-envelope"></i>
+        <div className="footer">
+            <div className="footer-icon"><i className="far fa-comment"></i></div>
+            <div className="footer-icon"><i className="fas fa-sync-alt"></i><span className="share-count">6</span></div>
+            <div className="footer-icon"><i className="far fa-heart"></i><span className="like-count">4</span></div>
+            <div className="footer-icon"><i className="far fa-envelope"></i></div>
         </div>
     );
 }
