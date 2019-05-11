@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
-import Header from './components/HeaderComponents/HeaderContainer';
-import Card from './components/CardComponents/CardContainer';
-import Footer from './components/FooterComponents/Footer';
+import React from "react";
+import "./App.css";
+import Header from "./components/HeaderComponents/HeaderContainer";
+import Card from "./components/CardComponents/CardContainer";
+import Footer from "./components/FooterComponents/Footer";
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
       <Card />
       <Footer />
     </div>
-  )
+  );
 };
 
 export default App;

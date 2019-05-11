@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    margin: 15px 0 15px 60px;
+    margin: 15px 0 15px 65px;
 }
 
 .footer-icon {
@@ -13,5 +13,5 @@
 .share-count, .like-count {
     margin-left: 10px;
     font-family: sans-serif;
-    font-size: .9rem;
+    font-size: .8rem;
 }
