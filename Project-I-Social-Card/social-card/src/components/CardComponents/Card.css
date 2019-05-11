@@ -1,42 +1,38 @@
 .card-container {
     width: 87%;
-
+    
     margin-left: 60px;
 
     border: 1px solid #d9dfe4;
     border-radius: 5px;
 }
 
-.card-banner-container {
+.card-banner-container, .card-banner {
     width: 100%;
 }
 
-.card-banner-container img {
-    width: 100%;
+.card-banner {
     border-radius: 5px 5px 0 0;
-
 }
 
 .card-content-container {
     padding: 15px;
 }
 
-.card-content-header {
+.card-content-header, .card-content, .card-link {
     margin-bottom: 10px;
-    
     font-size: .9rem;
+}
+
+.card-content-header {
     font-weight: bold;
 }
 
 .card-content {
-    margin-bottom: 10px;
-
-    font-size: .9rem;
     line-height: 20px;
 }
 
 .card-link {
-    color: #a0a9b3;
-    font-size: .9rem;
+    color: #8da1b9;
     text-decoration: none;
 }

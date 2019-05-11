@@ -16,15 +16,17 @@
     align-items: flex-end;
 }
 
-.header-title {
+.header-title, .header-content {
     font-size: .9rem;
+}
+
+.header-title {
     font-weight: bold;
-    margin-right: 5px;
-    margin-top: 2px;
+    margin: 2px 5px 0 0; 
 }
 
 .time-stamp {
-    color: #a0a9b3;
+    color: #8da1b9;
     font-size: .8rem
 }
 
@@ -33,7 +35,6 @@
 }
 
 .header-content {
-    font-size: .9rem;
     line-height: 20px;
 }
 
