@@ -7,4 +7,23 @@
     margin: 0 auto;
     
     border: 1px solid #979797;
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.295);
+}
+
+.error-message-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+
+    border: 1px solid #979797;
+}
+
+.error-message {
+    margin: 0 auto;
+    color: red;
+    font-size: 1.5rem;
 }

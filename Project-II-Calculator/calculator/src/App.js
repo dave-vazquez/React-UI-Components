@@ -9,8 +9,11 @@ import "./App.css";
 class App extends React.Component {
   constructor() {
     super();
-    
-    this.state = { total: "0" };
+
+    this.state = {
+      total: "0",
+      errorMessage: ""
+    };
 
     this.lastInput = this.state.total;
     this.operatorRegex = /[//*+-]/;
@@ -20,6 +23,11 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <Display value={this.state.total} />
+
+        <div className="error-message-container">
+          <h1 className="error-message">{this.state.errorMessage}</h1>
+        </div>
+
         <NumberPad
           updateTotal={this.updateTotal.bind(this)}
           evaluateExpression={this.evaluateExpression.bind(this)}
@@ -36,7 +44,10 @@ class App extends React.Component {
       total += input;
 
       this.lastInput = input;
-      this.setState({ total });
+      this.setState({
+        total,
+        errorMessage: ""
+      });
     }
   }
 
@@ -46,13 +57,13 @@ class App extends React.Component {
         if (this.operatorInputIsValid(input)) {
           return true;
         } else {
-          alert("Invalid Input");
+          this.setState({ errorMessage: "Input is Invalid" });
           return false;
         }
       }
       return true;
     } else {
-      alert("Character Limit Reached");
+      this.setState({ errorMessage: "Character Limit Reached (25)" });
       return false;
     }
   }
@@ -90,16 +101,33 @@ class App extends React.Component {
     try {
       total = String(math.eval(this.state.total));
     } catch (createSyntaxError) {
-      this.setState({ total: "error" });
+      this.setState({ errorMessage: "Invalid Format" });
       return;
     }
 
-    this.setState({ total });
+    this.setState({
+      total: this.format(total),
+      errorMessage: ""
+    });
   }
 
   clearDisplay() {
-    this.setState({ total: "0" });
+    this.setState({
+      total: "0",
+      errorMessage: ""
+    });
     this.lastInput = "0";
+  }
+
+  format(total) {
+    if (total.length >= 10) {
+      total = Number(total);
+      return String(
+        math.format(total, { notation: "exponential", precision: 8 })
+      );
+    }
+
+    return total;
   }
 }
 
