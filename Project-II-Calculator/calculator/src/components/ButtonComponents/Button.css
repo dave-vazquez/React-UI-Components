@@ -1,0 +1,50 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25%;
+    height: 95px;
+
+    border: 1px solid #979797;
+
+    font-size: 3rem;
+
+    outline: none;
+
+    cursor: pointer;
+
+    -moz-user-select: none; /* Firefox */
+        user-select: none;
+}
+
+.button:hover {
+    background-color: #f3f3f3;
+}
+
+.operator-button:hover,
+.equals-button:hover {
+    background-color: #860019;
+}
+
+.button:active {
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.253);
+}
+
+.zero-button {
+    width: 75%;
+}
+
+.clear-button {
+    width: 75%;
+    color: #505050;
+    font-weight: lighter;
+}
+
+.operator-button, .equals-button {
+    color: white;
+    font-size: 3.5rem;
+    /* font-weight: lighter; */
+    background-color: #A0011E;
+}
+
